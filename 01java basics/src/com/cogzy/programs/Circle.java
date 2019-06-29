@@ -11,25 +11,21 @@ public class Circle implements Shape {
 
 	@Override
 	public Rectangle getBounds() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Rectangle2D getBounds2D() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean contains(double x, double y) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean contains(Point2D p) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
