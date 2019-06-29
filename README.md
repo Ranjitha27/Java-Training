@@ -11,7 +11,7 @@ Topics covbered:
 * OOP using Java
 * Data Structures
 
-Trainer name: *Vinod Kumar*
-Email: **vinod@vinod.co**
-website: https://vinod.co/
+Trainer name: *Vinod Kumar*<br>
+Email: **vinod@vinod.co**<br>
+website: https://vinod.co/<br>
 
