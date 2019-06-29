@@ -1,7 +1,9 @@
 # Java Trainning
 
-## June-July 2019
----
+
+
+### June-July 2019
+
 
 Topics covbered:
 
@@ -9,7 +11,7 @@ Topics covbered:
 * OOP using Java
 * Data Structures
 
-Trainer name: Vinod Kumar
-Email: vinod@vinod.co
+Trainer name: *Vinod Kumar*
+Email: **vinod@vinod.co**
 website: https://vinod.co/
 
