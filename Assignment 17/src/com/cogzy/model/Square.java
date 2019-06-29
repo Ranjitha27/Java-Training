@@ -1,46 +1,39 @@
 package com.cogzy.model;
 
-public class Square extends Shape {
-
-	double side;
+public class Square extends Rectangle {
 
 	public Square() {
-
 	}
 
 	public Square(double side) {
-		super();
-		this.side = side;
-	}
+		setWidth(side);
+		setLength(side);
+	}	
 
-	public Square(String color, boolean filled, double side) {
-		super(color, filled);
-		this.side = side;
+	public Square(double side, String color, boolean filled) {
+		super(side, side, color, filled);
 	}
 
 	public double getSide() {
-		return side;
+		return getWidth();
 	}
 
 	public void setSide(double side) {
-		this.side = side;
+		setWidth(side);
+		setLength(side);
 	}
 
 	public double getArea() {
-
-		return side * side;
-
+		return super.getArea();
 	}
 
 	public double getPerimeter() {
-
-		return 4 * side;
-
+		return super.getPerimeter();
 	}
 
 	@Override
 	public String toString() {
-		return "Square [side=" + side + "]";
+		return "Square [side=" + getWidth() + "]";
 	}
 
 }
