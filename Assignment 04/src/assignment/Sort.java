@@ -1,32 +1,56 @@
 package assignment;
 
-import java.util.Scanner;
-import java.util.Arrays;
-
 public class Sort {
 
-	private static Scanner sc;
+	public static void sortThreeNumbers(int a, int b, int c) {
 
-	public static void main(String[] args) {
+		int t;
 
-		int i, Size;
-		sc = new Scanner(System.in);
-		System.out.println("Enter the Number Of Elements in the Array :");
-		Size = sc.nextInt();
+		if (!(a < b && a < c)) {
 
-		int[] a = new int[Size];
-		System.out.println("Please Enter " + Size + " Elements of an Array :");
+			if (b < a && b < c) {
 
-		for (i = 0; i < Size; i++) {
-			a[i] = sc.nextInt();
+				t = a;
+
+				a = b;
+
+				b = t;
+
+			} else {
+
+				t = a;
+
+				a = c;
+
+				c = t;
+
+			}
+
 		}
-		Arrays.sort(a);
-		System.out.println("\n Result of a Sorted Array :");
-		for (int Number : a) {
-			System.out.print(Number + " ");
+
+		if (b > c) {
+
+			t = b;
+
+			b = c;
+
+			c = t;
 
 		}
+
+		System.out.print(a + " " + b + " " + c);
 
 	}
 
+	public static void main(String[] args) {
+
+		sortThreeNumbers(2, 10, 1);
+		System.out.println();
+
+		sortThreeNumbers(20, 10, 1);
+		System.out.println();
+
+		sortThreeNumbers(2, 10, 100);
+		System.out.println();
+	}
 }

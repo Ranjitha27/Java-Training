@@ -1,28 +1,63 @@
 package assignment;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class EvenAndOdd {
 
-	private static Scanner sc;
+	public static int[] SumOfEvensAndOdds(int[] nums) {
+
+		if (nums == null) {
+
+			nums = new int[0];
+
+		}
+
+		int[] result = new int[2];
+
+		for (int num : nums) {
+
+			if (num % 2 == 0) {
+
+				result[0] += num;
+
+			} else {
+
+				result[1] += num;
+
+			}
+
+		}
+
+		return result;
+
+	}
+
+	public void printSumOfEvensAndOdds(int[] input) {
+
+		System.out.println(Arrays.toString(SumOfEvensAndOdds(input)));
+
+	}
 
 	public static void main(String[] args) {
 
-		int number, i, evenSum = 0, oddSum = 0;
-		sc = new Scanner(System.in);
+		try {
 
-		System.out.println("Enter any Number: ");
-		number = sc.nextInt();
+			int[] input = new int[args.length];
 
-		for (i = 1; i <= number; i++) {
+			for (int i = 0; i < input.length; i++) {
 
-			if (i % 2 == 0) {
-				evenSum = evenSum + i;
-			} else {
-				oddSum = oddSum + i;
+				input[i] = Integer.parseInt(args[i]);
+
 			}
+
+			EvenAndOdd obj = new EvenAndOdd();
+
+			obj.printSumOfEvensAndOdds(input);
+
+		} catch (NumberFormatException e) {
+
+			System.out.println("Only numbers are allowed.");
+
 		}
-		System.out.println("\n The Sum Of Even Numbers are" + " " + evenSum);
-		System.out.println("\n The Sum Of Odd Numbers are" + " " + oddSum);
 	}
 }

@@ -7,11 +7,14 @@ import com.cogzy.model.Shape;
 public class CreateShape17 {
 
 	public static void main(String[] args) {
-		
-     Shape s = new Shape();
-    Rectangle r = new Rectangle(2.0,3.0);
-    Circle c = new Circle(4.0);
-		
+
+		@SuppressWarnings("unused")
+		Shape s = new Shape();
+		@SuppressWarnings("unused")
+		Rectangle r = new Rectangle(2.0, 3.0);
+		@SuppressWarnings("unused")
+		Circle c = new Circle(4.0);
+
 	}
-	
+
 }

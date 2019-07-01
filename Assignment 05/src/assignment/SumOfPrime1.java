@@ -2,25 +2,60 @@ package assignment;
 
 public class SumOfPrime1 {
 
-	public static void main(String[] args) {
+	static boolean isPrime(int num) {
 
-		int i, number, count, sum = 0;
+		if (num <= 1) {
 
-		for (number = 1; number <= 100; number++) {
-			count = 0;
+			return false;
 
-			for (i = 2; i <= number / 2; i++) {
-				if (number % i == 0) {
-					count++;
-					break;
-
-				}
-			}
-			if (count == 0 && number != 1) {
-				sum = sum + number;
-			}
 		}
-		System.out.println("\n The Sum of Prime Numbers  " + sum);
+
+		for (int i = 2, j = num / 2; i <= j; i++) {
+
+			if (num % i == 0) {
+
+				return false;
+
+			}
+
+		}
+
+		return true;
 
 	}
+
+	public static int SumOfPrimes(int from, int to) {
+
+		int sum = 0;
+
+		if (from > to) {
+
+			int temp = from;
+
+			from = to;
+
+			to = temp;
+
+		}
+
+		for (int i = from; i <= to; i++) {
+
+			if (isPrime(i)) {
+
+				sum += i;
+
+			}
+
+		}
+
+		return sum;
+
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(SumOfPrimes(2,3));
+
+	}
+
 }
